@@ -1,0 +1,40 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #3C4E62 0% 0% no-repeat padding-box;
+    border-top: 2px solid #24A5D7;
+}
+
+.page-title{
+    text-align: center;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: Quicksand;
+    text-transform: capitalize;
+}
+
+.action-buttons{
+    letter-spacing: 0px;
+    color: #1F2834;
+    text-transform: uppercase;
+}
+
+button{
+    padding: 5px 15px;
+    box-shadow: 0px 1px 3px #0000003D;
+    border-radius: 2px;
+    margin: 0 5px;
+
+}
+.cancel{
+    background: #3FD28B 0% 0% no-repeat padding-box;
+
+   }
+
+.create{
+    background: #1F7A54 0% 0% no-repeat padding-box;
+
+   }

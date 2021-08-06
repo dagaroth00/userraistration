@@ -1,0 +1,108 @@
+
+.container{
+    width: 400px;
+    margin: 50px auto;
+    background: white;
+    padding: 15px 25px;
+    border-top: solid rgba(105, 50, 156, 0.267) 3px;
+    position: relative;
+  
+}
+.container div{
+    margin-bottom: 20px ;
+}
+
+.heading{
+    width: 100%;
+display: flex;
+    font-size: 24px;
+    font-family: Quicksand;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #222222;
+    justify-content: center;
+
+}
+
+.eye {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20px;
+    background-color: white;
+    color: green;
+    float: right;
+  }
+
+#username , #password{
+    width: 100%;
+    border:none; 
+    height: 35px;
+    border-bottom: groove; 
+    text-align: left;
+    font-size: 16px;
+    font-family: Quicksand;
+    letter-spacing: 0px;
+    color: #666666;
+}
+.username , .password{
+   border: none;
+   position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+input{
+      outline: none  ;
+}
+
+
+span{
+    text-align: right;
+    font-size: 13px;
+    font-family: Quicksand;
+    letter-spacing: 0px;
+    color: #1F7A54;
+    text-transform: uppercase;
+    
+}
+
+.remember{
+    color: #222222;
+    font-family: Quicksand;
+    font-size: 16;
+    font-weight: bold;
+}
+
+.login{
+    text-align: center;
+   
+    
+}
+.button{
+   
+    background: #3FD28B 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 5px #0000003D;
+    border: none;
+    width: 216px;
+    height: 40px;
+    color: white;
+    padding: 11px 80px;
+    text-align: center;
+    font: normal normal medium 14px/18px Quicksand;
+}
+
+
+
+
+
+.about{
+    width:fit-content;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 14px;
+    font-family: Quicksand;
+    letter-spacing: 0px;
+    color: #1F7A54;
+
+}

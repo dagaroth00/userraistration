@@ -1,0 +1,171 @@
+
+
+<form action=""  #user="ngForm" (ngSubmit)="onsubmit()" >
+
+    <div class="section">
+        <div class="section-title">Educational Qualifications</div>
+        <div class="arrow"><img src="#" alt=" > "></div>
+    </div>
+
+    <div class="edu-qualification">
+
+
+        
+        <div class="field">
+            <div class="field-name">Aggregate Percentage*</div>
+            <input type="text" name="avg-per" id="avg-per" [(ngModel)]="userqualification.avgpercentage">
+        </div>
+            
+        <div class="input-group-1">
+            <div class="field-name">year of passing</div>
+            <select name="yearOfPassing" id="passing-year"  [(ngModel)]="userqualification.yearOfPassing" >
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+            </select>
+        </div>
+
+
+        <div class="q-group">
+
+            <div class="input-group-1">
+                <div class="field-name">Qualification*  </div>
+                <select name="qualification" id="qualification" [(ngModel)]="userqualification.qualification">
+                  <option value="B-tech">Bachelor in Technology (B.Tech)</option>
+                  <option value="m-tech">Masters in Technology (M.Tech)</option>
+                </select>
+            </div>
+
+            <div class="input-group-1">
+                <div class="field-name">Stream*</div>
+                <select name="stream" id="stream" [(ngModel)]="userqualification.stream"  >
+                  <option value="CMPN">Computer Engineer</option>
+                  <option value="IT">Information Technology</option>
+                </select>
+            </div>
+
+            <div class="input-group-1">
+                <div class="field-name">College*</div>
+                <select name="college" id="college" [(ngModel)]="userqualification.college">
+                  <option value="one">Aaa Baa Caa </option>
+                  <option value="two">Xaa  Zaaa</option>
+                </select>
+            </div>
+            <div class="field">
+                <div class="field-name">If others, please enter your college name</div>
+                <input type="text" name="cname " id="cname">
+            </div>
+
+            
+
+        </div>
+        <div class="field">
+            <div class="field-name">Where is your college located?*</div>
+            <input type="text" name="collegeLocation" id="collegeLocation" [(ngModel)]="userqualification.collegeLocation">
+        </div>
+    </div>
+
+
+    <input type="checkbox" id="checkTab" name="checkTab" checked />
+ <div class="section " id="section2">
+   
+        <div class="section-title">Professional Qualifications</div>
+        <div class="arrow"><img src="#" alt=" > "></div> 
+       
+    </div>
+
+
+    <div class="acc-type">
+        <div class="field">
+            <div class="field-name">Account Type</div>
+            <span>
+            <input type="radio" id="redio1"
+            name="account-type" value="Fresher" [(ngModel)]="userqualification.accountType">
+           <label for="redio1">Fresher</label>
+       
+           <input type="radio" id="redio2"
+            name="account-type" value="Experienced" [(ngModel)]="userqualification.accountType"> 
+           <label for="redio2">Experienced</label>
+           </span>
+        </div>
+        {{user.value | json}}
+        <!-- {{userqualification | json}} -->
+
+        <br>
+        
+       
+    </div>
+
+    <div class="pro-qualification"  *ngIf=" userqualification.accountType==='Experienced' ">
+            <div class="field" id="fre">
+                <div class="field-name fre">Years of Experience*</div>
+                <input type="text" name="year-of-experience" id="year-of-experience" [(ngModel)]="userqualification.yearsOfExp">
+            </div>
+       
+            
+            <div class="field fre">
+                <div class="field-name">Curent CTC* (in Rupees)</div>
+                <input type="text"  required  #cctc="ngModel" name="cctc" id="c-ctc"  [(ngModel)]="userqualification.currentctc">
+               
+                {{cctc.untouched}}
+                <br>
+                <small [class.hide]="cctc.valid">show show show</small>
+            </div>
+           
+            <div class="field fre">
+                <div class="field-name">Expected CTC* (in Rupees)</div>
+                <input type="text" name="eCTC" id="e-ctc" [(ngModel)]="userqualification.expectedctc">
+            </div>
+           
+            
+                <div class="field1" ngModelGroup="techExpIn">
+                    <div class="field-name">Select All The Technologies You Expertise In*</div>
+                    
+                    <input type="checkbox" id="js" name="js" value="js" [(ngModel)]="userqualification.techExpIn[0]">
+                    <label for="js"> Instructional Designer</label><br>
+                    <input type="checkbox" id="anuglarjs" name="anuglarjs" value="anuglarjs" [(ngModel)]="userqualification.techExpIn[1]">
+                    <label for="anuglarjs">Software Engineer </label><br>
+                    <input type="checkbox" id="react" name="react" value="react" [(ngModel)]="userqualification.techExpIn[2]">
+                    <label for="react"> Software Quality Engineer</label><br>
+                    <input type="checkbox" id="nodejs" name="nodejs" value="nodejs" [(ngModel)]="userqualification.techExpIn[3]">
+                    <label for="nodejs">Node Js </label><br>
+                    <input type="checkbox" id="other" name="other" value="other" [(ngModel)]="userqualification.techExpIn[4]">
+                    <label for="other"> Others</label><br>
+              
+            <div class="field">
+                <div class="field-name">If others, please mention</div>
+                <input type="text" name="etech" id="etech">
+            </div>
+              </div>
+
+
+                <div class="field1" ngModelGroup="techfamiwith" >
+                    <div class="field-name">Select All The Technologies You Expertise In*</div>
+                    
+                    <input type="checkbox" id="fajs" name="js" value="js"  [(ngModel)]="userqualification.techExpIn[0]">
+                    <label for="fajs"> Instructional Designer</label><br>
+                    <input type="checkbox" id="faanuglarjs" name="anuglarjs" value="anuglarjs" [(ngModel)]="userqualification.techExpIn[1]">
+                    <label for="faanuglarjs">Software Engineer </label><br>
+                    <input type="checkbox" id="fareact" name="react" value="react" [(ngModel)]="userqualification.techExpIn[2]">
+                    <label for="fareact"> Software Quality Engineer</label><br>
+                    <input type="checkbox" id="fanodejs" name="nodejs" value="nodejs" [(ngModel)]="userqualification.techExpIn[3]">
+                    <label for="fanodejs">Node Js </label><br>
+                    <input type="checkbox" id="faother" name="other" value="other" [(ngModel)]="userqualification.techExpIn[4]">
+                    <label for="faother"> Others</label><br>
+              
+            <div class="field">
+                <div class="field-name">If others, please mention</div>
+                <input type="text" name="etech" id="etech">
+            </div>
+              </div>
+
+
+         
+            <div class="field">
+                <div class="field-name">If Yes, which role did you apply for?</div>
+                <input type="text" name="" id="">
+            </div>
+</div>
+{{user.form.valid}}
+<button type="submit" [disabled]="user.form.invalid" ></button>
+
+</form>

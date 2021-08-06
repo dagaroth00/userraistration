@@ -1,0 +1,30 @@
+
+.navigation{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    display: flex;
+    justify-content: space-between;
+border-radius: 2px;
+font-size: 16px;
+font: normal normal normal 16px/20px Material-Design-Iconic-Font;
+letter-spacing: 0px;
+padding: 10px;
+}
+
+
+.navigation div{
+    display: flex;
+    align-items: center;
+    font-family: Quicksand;
+    font-weight: bolder;
+}
+.num{
+    display: flex;
+    
+    justify-content: center;
+    margin: 5px 6px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    text-align: center;
+    background: #3FD28B 0% 0% no-repeat padding-box;
+}

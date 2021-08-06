@@ -1,0 +1,75 @@
+form{
+    margin: 24px 0px;
+    padding: 24px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+}
+
+.field{
+    width: 50%;
+    margin-top: 40px;
+}
+
+.field1{
+    width: 50%;
+    margin-top: 40px;
+}
+.field-name{
+    text-align: left;
+    font-family:  Quicksand;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #666666;
+    margin-bottom: 12px;
+}
+.field input{
+
+    border: none;
+    outline: none;
+    border-bottom:  1px solid #000000;
+    width: 100%;
+   
+    font-family:  Quicksand;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #222222;
+    padding-bottom: 5px;
+}
+
+.resume::-webkit-file-upload-button {
+    visibility: hidden;
+
+  }
+
+
+  .resume::before {
+    content: 'UPLOAD RESUME';
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    color: #1F7A54;
+    border: none;
+    border-radius: 3px;
+  
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  label{
+    text-align: left;
+    font-family:  Quicksand;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #222222;
+    padding-left: 10px;
+  }
+  .field1 input{
+    margin: 10px 0;
+  }

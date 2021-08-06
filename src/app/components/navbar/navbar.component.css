@@ -1,0 +1,15 @@
+
+
+nav{
+    background: #1F2834 0% 0% no-repeat padding-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+    align-items: center;
+
+}
+
+.user-image  img{
+    border: 2px solid #3FD28B;
+    background-color: #3FD28B;
+}
