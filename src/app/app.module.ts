@@ -12,6 +12,7 @@ import { CreateAccountPersonalInfoComponent } from './components/create-account-
 import { CreateAccountQualificationsComponent } from './components/create-account-qualifications/create-account-qualifications.component';
 
 import { FormsModule } from '@angular/forms';
+import { UserdetailsService } from './core/userdetails.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [UserdetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

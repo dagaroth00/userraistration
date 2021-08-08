@@ -1,29 +1,30 @@
 
-<form>
+<form #personalinfo="ngForm" (ngSubmit)="onsubmit()">
 
 <div class="field">
     <div class="field-name">First Name *</div>
-    <input type="text" name="f-name" id="f-name">
+    <input type="text" name="fname" id="f-name" [(ngModel)]="userinfo.name">
 </div>
-
+{{personalinfo.value | json}}
+{{userinfo.name | json}}
 <div class="field">
     <div class="field-name">Last Name *</div>
-    <input type="text" name="l-name" id="l-name">
+    <input type="text" name="l-name" id="l-name" [(ngModel)]="userinfo.surname">
 </div>
 
 <div class="field">
     <div class="field-name">Email *</div>
-    <input type="email" name="Email" id="Email">
+    <input type="email" name="Email" id="Email" [(ngModel)]="userinfo.email">
 </div>
 
 <div class="field">
     <div class="field-name">Phone Number*</div>
-    <input type="number" name="ph-no" id="ph-no">
+    <input type="number" name="ph-no" id="ph-no" [(ngModel)]="userinfo.phoneno">
 </div>
 
 <div class="field">
    
-    <input type="file" class="resume" id="resume" style="border: none;">
+    <input type="file" class="resume" id="resume" style="border: none;" >
 </div>
 
 
@@ -31,30 +32,34 @@
 
 <div class="field">
     <div class="field-name">Enter Portfolio URL (if any)</div>
-    <input type="text" name="f-name" id="f-name">
+    <input type="text" name="f-name" id="f-name" [(ngModel)]="userinfo.portfoliourl">
 </div>
 
-<div class="field1">
+<div class="field1" ngModelGroup="jobroles"  [(ngModel)]="userinfo.jobroles">
     <div class="field-name">Preferred Job Roles*</div>
     
-    <input type="checkbox" id="role1" name="role1" value="role1">
+    <input type="checkbox" id="role1" name="role1" value="role1" ngModel>
     <label for="role1"> Instructional Designer</label><br>
-    <input type="checkbox" id="role2" name="role2" value="role2">
+    <input type="checkbox" id="role2" name="role2" value="role2" ngModel>
     <label for="role2">Software Engineer </label><br>
-    <input type="checkbox" id="role3" name="role3" value="role3">
+    <input type="checkbox" id="role3" name="role3" value="role3" ngModel>
     <label for="role3"> Software Quality Engineer</label><br>
 </div>
 
-
+{{userinfo.jobroles | json }}
 <div class="field">
     <div class="field-name">If You Are Registering Via A Referral, Please Mention Full Name Of The Employee Who Referred You)</div>
-    <input type="text" name="Referral" id="Referral">
+    <input type="text" name="Referral" id="Referral" [(ngModel)]="userinfo.referal">
 </div>
 
 
 <div class="field1">
   
-    <input type="checkbox" id="r" name="r" value="Boat">
+    <input type="checkbox" id="subscribe" name="subscribe" value="Boat" [(ngModel)]="userinfo.subscribe">
     <label for="r"> Send me job related updates via mail</label><br>
 </div>
+
+
+<button type="submit" >NEXT</button>
+
 </form>

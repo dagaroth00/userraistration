@@ -47,7 +47,7 @@ form{
   .resume::before {
     content: 'UPLOAD RESUME';
     display: inline-block;
-    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    background:  #ffffff;
     color: #1F7A54;
     border: none;
     border-radius: 3px;

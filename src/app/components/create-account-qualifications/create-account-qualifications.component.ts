@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserdetailsService } from 'src/app/core/userdetails.service';
 import { UserQualification } from 'src/app/shared/user-qualification';
 @Component({
   selector: 'app-create-account-qualifications',
@@ -9,11 +10,7 @@ export class CreateAccountQualificationsComponent implements OnInit {
 
  userqualification = new UserQualification(100,200,"","","","","Experienced",50,100,500 , [false,false,false,false,false],[false,false,false,false,false]);
 
-  constructor() { }
-
-
-
-
+  constructor(public user: UserdetailsService) { }
 
   
   ngOnInit(): void {
@@ -22,6 +19,6 @@ export class CreateAccountQualificationsComponent implements OnInit {
 
 
   onsubmit(){
-    console.log(this.userqualification);
+    console.log(this.userqualification + "from back of page"  + this.user.getname());
   }
 }
