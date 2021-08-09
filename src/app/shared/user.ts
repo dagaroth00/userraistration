@@ -7,5 +7,12 @@ export interface User {
     jobroles :{};
     referal: string;
     subscribe: boolean;
+
+
+    
+//  job():void {
+//     this.jobroles = {'role1':'','role2':'','role3':''};
+// }
+
 }
 

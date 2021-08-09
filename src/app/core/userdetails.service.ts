@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { User } from '../shared/user';
+import { UserQualification } from '../shared/user-qualification';
 
 @Injectable({
   providedIn: 'root'
@@ -16,27 +17,47 @@ export class UserdetailsService {
                         "referal":"",
                         "subscribe":false
                       };
-
+userqualification: UserQualification ={
+                        "avgpercentage":0 ,
+                        "yearOfPassing":0,
+                        "qualification":"",
+                        "stream":"",
+                        "college":"",
+                        "collegeLocation":"",
+                        "accountType":"",
+                        "yearsOfExp":0,
+                        "currentctc":0,
+                        "expectedctc":0,
+                        "techExpIn":[false,false,false,false,false]  ,
+                        "techfamiwith":[false,false,false,false,false]  
+                      };
                       
   constructor() { }
 
   setdetails(user: User){
     this.userdetails = user;
-    console.log("yesss did it" + this.userdetails.name);
-    this.champ();
+    // console.log("user data saved" + this.userdetails.name);
   }
   
-  champ(){
-  console.log(this.userdetails.name+"this is done");
-}
+  setqualificationdetails(user: UserQualification){
+    this.userqualification = user;
+  }
+  
+  
 
 getname(){
-    
-
         console.log("name is " + this.userdetails.jobroles);
- var pika = "nam";
-  return  pika;
+  return  this.userdetails.jobroles;
   
+}
+
+getqualificationdetails(){
+  return this.userqualification;
+}
+
+getpersonaldetails(){
+
+  return this.userdetails;
 }
 
 }

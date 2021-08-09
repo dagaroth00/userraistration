@@ -13,6 +13,7 @@ import { CreateAccountQualificationsComponent } from './components/create-accoun
 
 import { FormsModule } from '@angular/forms';
 import { UserdetailsService } from './core/userdetails.service';
+import { ReviewDetailsComponent } from './components/review-details/review-details.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { UserdetailsService } from './core/userdetails.service';
     CreateAccountNavComponent,
     CreateAccountTabNavigationComponent,
     CreateAccountPersonalInfoComponent,
-    CreateAccountQualificationsComponent
+    CreateAccountQualificationsComponent,
+    ReviewDetailsComponent
   ],
   imports: [
     BrowserModule,

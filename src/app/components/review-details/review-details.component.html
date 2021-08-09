@@ -1,0 +1,236 @@
+
+
+<div>
+    
+    <form>
+
+        <div class="section">
+            <div class="section-title">Personal Information </div>
+            <div class="arrow">EDIT</div>
+        </div>
+    
+        <div class="personaldetails">
+<div class="field">
+    <div class="field-name">First Name </div>
+    <div class="data">{{userinfo.name}}</div>
+
+
+</div>
+<div class="field">
+    <div class="field-name">Last Name </div>
+    <div class="data">{{userinfo.surname}}</div>
+</div>
+
+<div class="field">
+    <div class="field-name">Email </div>
+    <div class="data">{{userinfo.email}}</div>
+</div>
+
+<div class="field">
+    <div class="field-name">Phone Number</div>
+     <div class="data">{{userinfo.phoneno}}</div>
+</div>
+
+<div class="field">
+   
+    <input type="file" class="resume" id="resume" style="border: none;" >
+</div>
+
+
+
+
+<div class="field">
+    <div class="field-name"> Portfolio URL (if any)</div>
+    <div class="data">{{userinfo.portfoliourl}}</div>
+</div>
+
+<div class="field1" ngModelGroup="jobroles"  [(ngModel)]="userinfo.jobroles">
+    <div class="field-name">Preferred Job Roles*</div>
+    
+    <input type="checkbox" id="role1" name="role1" value="role1" ngModel>
+    <label for="role1"> Instructional Designer</label><br>
+    <input type="checkbox" id="role2" name="role2" value="role2" ngModel>
+    <label for="role2">Software Engineer </label><br>
+    <input type="checkbox" id="role3" name="role3" value="role3" ngModel>
+    <label for="role3"> Software Quality Engineer</label><br>
+</div>
+
+<div class="field">
+    <div class="field-name">If You Are Registering Via A Referral, Please Mention Full Name Of The Employee Who Referred You)</div>
+    <div class="data">{{userinfo.referal}}</div>
+</div>
+
+
+<div class="field1">
+  
+    <input type="checkbox" id="subscribe" name="subscribe" value="Boat" [ngModel]="userinfo.subscribe">
+    
+    <label for="r"> Send me job related updates via mail</label><br>
+</div>
+
+</div>
+</form>
+
+
+</div>
+
+
+
+
+<div>
+
+    <form >
+
+        <div class="section">
+            <div class="section-title">Educational Qualifications</div>
+            <div class="arrow">EDIT</div>
+        </div>
+    
+        <div class="edu-qualification">
+    
+    
+            
+            <div class="field">
+                <div class="field-name">Aggregate Percentage*</div>
+                <div class="data">{{userqualification.avgpercentage}}</div>
+            </div>
+                
+            <div class="input-group-1">
+                <div class="field-name">year of passing</div>
+               
+                <div class="data">{{userqualification.yearOfPassing}}</div>
+            
+            </div>
+    
+    
+            <div class="q-group">
+    
+                <div class="input-group-1">
+                    <div class="field-name">Qualification*  </div>
+                  
+                    <div class="data">{{userqualification.qualification}}</div>
+            
+                </div>
+    
+                <div class="input-group-1">
+                    <div class="field-name">Stream*</div>
+                
+                    <div class="data">{{userqualification.stream}}</div>
+            
+                </div>
+    
+                <div class="input-group-1">
+                    <div class="field-name">College*</div>
+                       <div class="data">{{userqualification.college}}</div>
+            
+                </div>
+                <div class="field">
+                    <div class="field-name">If others, please enter your college name</div>
+                    <div class="data">-</div>
+            
+                </div>
+    
+                
+    
+            </div>
+            <div class="field">
+                <div class="field-name">Where is your college located?*</div>
+                <div class="data">{{userqualification.collegeLocation}}</div>
+            
+            </div>
+        </div>
+    
+    
+     <div class="section " id="section2">
+       
+            <div class="section-title">Professional Qualifications</div>
+            <div class="arrow"> EDIT</div> 
+            
+           
+        </div>
+    
+    
+     
+    
+        <div class="pro-qualification"  >
+
+            <div class="field">
+                <div class="field-name">Account Type</div>
+                <div class="data">{{userqualification.accountType}}</div>
+            
+            </div>
+
+                <div class="field" id="fre" *ngIf=" userqualification.accountType==='Experienced' ">
+                    <div class="field-name fre">Years of Experience*</div>
+                    <div class="data">{{userqualification.yearsOfExp}}</div>
+            
+                </div>
+           
+                
+                <div class="field fre" *ngIf=" userqualification.accountType==='Experienced' ">
+                    <div class="field-name" >Curent CTC* (in Rupees)</div>
+                    <div class="data">{{userqualification.currentctc}}</div>
+            
+                </div>
+               
+                <div class="field fre" *ngIf=" userqualification.accountType==='Experienced' ">
+                    <div class="field-name">Expected CTC* (in Rupees)</div>
+                    <div class="data">{{userqualification.expectedctc}}</div>
+             </div>
+               
+                
+                    <div class="field1" ngModelGroup="techExpIn" *ngIf=" userqualification.accountType==='Experienced' ">
+                        <div class="field-name"> The Technologies You Expertise In</div>
+                        
+                        <div *ngFor="let tech of userqualification.techExpIn | keyvalue ; index as i ">
+                            <div class="data" *ngIf="tech.value">{{technologies[i]}}</div> 
+                           
+                        </div>
+
+                       
+                  
+                <div class="field"  *ngif='userqualification.techExpIn[4]'>
+                    <div class="field-name">If others, please mention</div>
+                    <div class="data"> </div>
+            
+                </div>
+                  </div>
+    
+    
+                    <div class="field1" ngModelGroup="techfamiwith" >
+                        <div class="field-name"> Technologies You Familier With</div>
+                          
+                        <div *ngFor="let tech of userqualification.techfamiwith | keyvalue ; index as i ">
+                            <div class="data" *ngIf="tech.value">{{technologies[i]}}</div> 
+                           
+                        </div>
+                       
+                  
+                <div class="field" *ngif='userqualification.techfamiwith[4]'>
+                    <div class="field-name">If others, please mention</div>
+                    <div class="data"></div>
+            
+                </div>
+                  </div>
+    
+    
+             
+                <div class="field">
+                    <div class="field-name">If Yes, which role did you apply for?</div>
+                    <input type="text" name="" id="">
+                </div>
+    </div>
+   
+    
+    <div class="buttons">
+        <button   >PREVIOUS</button>
+    
+        <button  >Submit</button>
+    
+    </div>
+    
+    </form>
+
+</div>
+
+

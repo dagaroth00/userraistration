@@ -1,31 +1,30 @@
-export class UserQualification {
-    constructor(
-        public avgpercentage: number,
-        public yearOfPassing : number,
-        public qualification : String,
-        public stream : String,
-        public college : String,
-        public collegeLocation: String,
-        public accountType: String,
-        public yearsOfExp : number,
-        public currentctc : number,
-        public expectedctc : number,
-         public techExpIn :[
+export interface UserQualification {
+  
+         avgpercentage: number;
+         yearOfPassing : number;
+         qualification : String;
+         stream : String;
+         college : String;
+         collegeLocation: String;
+         accountType: String;
+         yearsOfExp : number;
+         currentctc : number;
+         expectedctc : number;
+          techExpIn :[
             js: boolean,
             anuglarjs: boolean,
             react: boolean,
             nodejs: boolean,
             other: boolean
-        ],
-         public techfamiwith :[
+        ];
+          techfamiwith :[
             js: boolean,
             anuglarjs: boolean,
             react: boolean,
             nodejs: boolean,
             other: boolean
-        ],
+        ];
 
 
-    ){}
 
 }

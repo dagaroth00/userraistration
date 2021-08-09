@@ -14,7 +14,6 @@
 }
 
 .section-title{
-   
     padding-left: 15px;
    
 }
@@ -24,7 +23,7 @@
 }
 
 
-.edu-qualification , .pro-qualification, .acc-type{
+.edu-qualification , .pro-qualification, .personaldetails, .acc-type{
     padding: 24px 24px 5px 24px ;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border-radius: 2px;
@@ -48,11 +47,10 @@
     color: #666666;
     margin-bottom: 12px;
 }
-.field input{
+.field input, .field .data{
 
     border: none;
     outline: none;
-    border-bottom:  1px solid #000000;
     width: 50%;
    
     font-family:  Quicksand;
@@ -70,23 +68,10 @@
 
 }
 
-.input-group-1 label {
+/* .input-group-1 label {
   /* width: 30%; */
-}
+/* } */
 
-.input-group-1 select {
-   
-    width: 10em;
-    border:none;
-    font-size: 16px;
-    font-family: Quicksand;
-    font-weight: bold;
-    font: normal normal medium 16px/20px Quicksand;
-    letter-spacing: 0px;
-    color: #000000;
-    border-bottom:  1px solid #000000;
-  outline: none;
-}
 
 
 .q-group {
@@ -95,7 +80,7 @@
         gap: 5%;
 }
 
-.q-group .input-group-1 select{
+.q-group .input-group-1 .data{
     width: 100%;
 }
 
@@ -106,33 +91,7 @@
 .acc-type{
     margin-bottom: 3px;
 }
-span{
-    display: flex;
-}
-span label{
-   
-    font-family:  Quicksand;
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 0px;
-    color: #222222;
-}
-.acc-type .field{
-    width: 30%;
-}
-span input{
-   width: auto;
-     border-bottom: none;
- 
-}
-.field1 label{
-    line-height: 35px;
-    font-family:  Quicksand;
-    font-size: 16px;
-    font-weight: bold;
-letter-spacing: 0px;
-color: #222222;
-}
+
 
 .hide{
     display: none;
