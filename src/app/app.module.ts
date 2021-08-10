@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -14,6 +16,10 @@ import { CreateAccountQualificationsComponent } from './components/create-accoun
 import { FormsModule } from '@angular/forms';
 import { UserdetailsService } from './core/userdetails.service';
 import { ReviewDetailsComponent } from './components/review-details/review-details.component';
+import { WalkinComponent } from './components/walkin/walkin.component';
+import { WalkinJobListingComponent } from './components/walkin-job-listing/walkin-job-listing.component';
+import { WalkinJobListingCardComponent } from './components/walkin-job-listing-card/walkin-job-listing-card.component';
+import { JobdetailsService } from './core/jobdetails.service';
 
 @NgModule({
   declarations: [
@@ -25,14 +31,18 @@ import { ReviewDetailsComponent } from './components/review-details/review-detai
     CreateAccountTabNavigationComponent,
     CreateAccountPersonalInfoComponent,
     CreateAccountQualificationsComponent,
-    ReviewDetailsComponent
+    ReviewDetailsComponent,
+    WalkinComponent,
+    WalkinJobListingComponent,
+    WalkinJobListingCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [UserdetailsService],
+  providers: [UserdetailsService , JobdetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,6 +6,8 @@ import { CreateAccountQualificationsComponent } from './components/create-accoun
 import { CreateAccountComponent } from './components/create-account/create-account.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReviewDetailsComponent } from './components/review-details/review-details.component';
+import { WalkinJobListingComponent } from './components/walkin-job-listing/walkin-job-listing.component';
+import { WalkinComponent } from './components/walkin/walkin.component';
 const routes: Routes = [
   {path: 'login' , component: LoginComponent},
   {path: 'useraccount' , component: CreateAccountComponent,
@@ -13,8 +15,13 @@ const routes: Routes = [
        {path: 'personalinfo', component: CreateAccountPersonalInfoComponent }, 
        {path: 'qualificationinfo', component: CreateAccountQualificationsComponent },
        {path: 'reviewinfo', component: ReviewDetailsComponent }
-        ]   
-  }  ,
+        ]},
+
+  {path: 'walkin' , component: WalkinComponent,
+    children:[
+          {path: 'joblist' , component: WalkinJobListingComponent}
+        ]},
+
   {path: '**' , component: LoginComponent}
 ];
 

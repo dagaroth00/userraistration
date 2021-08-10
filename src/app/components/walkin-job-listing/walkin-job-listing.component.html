@@ -1,0 +1,37 @@
+
+<div class="container">
+<div class="jobcard" *ngFor="let job of Job " >
+
+    <div class="jobtitle"> {{job.title}}</div>
+
+    <div class="details">
+        <div class="datetime">
+            <div class="sectionhead">Date and Time</div>
+            <div class="data">{{job.start_date}} to {{job.last_date}}</div>
+        </div>
+        <div class="location">
+                {{job.location}}
+        </div>
+
+    </div>
+
+
+    <div class="jobroles">
+
+        <div class="sectionhead">Job Roles</div>
+        <div class="jobrole">
+        <div class="data" *ngFor="jobrole of job.job_roles; index as i">
+             <img src="../../../assets/icons/classes.svg" alt="" style="height: 20px; width: 20px; border-radius: 50%;"> 
+             {{job.job_roles[i]}}
+            </div>
+
+</div>
+    </div>
+    
+    
+    <div class="note" *ngIf="job.note">{{job.note}}</div>
+
+
+    <div class="btn"><button>VIEW MORE DETAIILS</button></div>
+</div>
+</div>
