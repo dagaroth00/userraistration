@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';  //dont forget to add me
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +18,6 @@ import { UserdetailsService } from './core/userdetails.service';
 import { ReviewDetailsComponent } from './components/review-details/review-details.component';
 import { WalkinComponent } from './components/walkin/walkin.component';
 import { WalkinJobListingComponent } from './components/walkin-job-listing/walkin-job-listing.component';
-import { WalkinJobListingCardComponent } from './components/walkin-job-listing-card/walkin-job-listing-card.component';
 import { JobdetailsService } from './core/jobdetails.service';
 
 @NgModule({
@@ -34,7 +33,6 @@ import { JobdetailsService } from './core/jobdetails.service';
     ReviewDetailsComponent,
     WalkinComponent,
     WalkinJobListingComponent,
-    WalkinJobListingCardComponent
   ],
   imports: [
     BrowserModule,

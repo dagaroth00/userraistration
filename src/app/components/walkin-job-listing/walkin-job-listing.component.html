@@ -2,12 +2,12 @@
 <div class="container">
 <div class="jobcard" *ngFor="let job of Job " >
 
-    <div class="jobtitle"> {{job.title}}</div>
+    <div class="jobtitle"> {{job.job_title}}</div>
 
     <div class="details">
         <div class="datetime">
             <div class="sectionhead">Date and Time</div>
-            <div class="data">{{job.start_date}} to {{job.last_date}}</div>
+            <div class="data">{{job.start_date}} to {{job.end_date}}</div>
         </div>
         <div class="location">
                 {{job.location}}

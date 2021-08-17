@@ -13,10 +13,13 @@ export class JobdetailsService {
   
   constructor(private http: HttpClient) { }
 
-  baseUrl: string = 'assets/';
+  // baseUrl: string = 'assets/';
+  baseUrl: string = 'https://localhost:44397/api/values';
+  // baseUrl: string = 'https://reqbin.com/echo/get/json';
 
   getJobdetails(): Observable<Jobdata[]>{
-    return this.http.get<Jobdata[]>(this.baseUrl+'data.json')
+    return this.http.get<Jobdata[]>(this.baseUrl)
+///    return this.http.get<Jobdata[]>(this.baseUrl+'data.json')
       .pipe(
         catchError(this.handleError)
       );
